@@ -1,23 +1,54 @@
-Multithreaded Proxy Server with LRU Cache
-📌 Overview
-This is a Java-based multithreaded proxy server that efficiently handles HTTP GET requests.
-It includes:
+# 🚀 Multithreaded Proxy Server with LRU Cache
 
-LRU caching to speed up repeated requests
-Rate limiting to prevent excessive traffic
-Cache statistics tracking for performance monitoring
-⚡ Features
-✅ Multithreaded Request Handling
-Uses ExecutorService to process multiple client connections concurrently.
-Supports GET requests.
-✅ LRU Caching for Faster Responses
-Implements an LRU (Least Recently Used) cache to store frequently accessed responses.
-Reduces repeated network calls by serving cached content.
-✅ Cache Statistics Tracking
-Tracks:
-Cache Hits (Requests served from cache)
-Cache Misses (Requests fetched from the origin server)
-Cache Evictions (Entries removed due to capacity limits)
-✅ Rate Limiting (Token Bucket Algorithm)
-Limits the number of requests per client within a given time window.
-Prevents excessive traffic and server overload.
+## 📌 Overview
+
+This is a **Java-based multithreaded HTTP proxy server** designed to efficiently handle multiple client requests concurrently.  
+The project focuses on **performance optimization** using **LRU caching**, **thread pooling**, and **request control mechanisms**.
+
+### 🔍 Key Highlights
+- Handles multiple client connections simultaneously
+- Supports HTTP `GET` requests
+- Uses an **LRU (Least Recently Used) cache** to speed up repeated requests
+- Tracks cache statistics for performance monitoring
+- Implements basic rate limiting to prevent excessive traffic
+
+---
+
+## ⚡ Features
+
+### ✅ Multithreaded Request Handling
+- Uses Java’s `ExecutorService` for efficient thread management
+- Processes multiple client connections concurrently
+- Improves responsiveness under heavy load
+
+---
+
+### ✅ LRU Caching for Faster Responses
+- Stores frequently accessed responses in memory
+- Automatically evicts least recently used entries
+- Reduces latency and external server requests
+
+---
+
+### ✅ Cache Statistics Tracking
+- Tracks cache hits and misses
+- Helps analyze performance improvements
+- Useful for optimization and debugging
+
+---
+
+### ✅ Rate Limiting
+- Prevents a single client from overwhelming the server
+- Improves stability under high traffic conditions
+
+---
+
+## 🧠 Technologies Used
+
+- **Java**
+- **Java Networking (Socket Programming)**
+- **Multithreading (ExecutorService)**
+- **LRU Cache (Custom Implementation)**
+- **HTTP Protocol (GET Requests)**
+
+
